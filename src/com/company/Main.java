@@ -15,9 +15,11 @@ public class Main {
         thread3.start();
         thread4.start();
 
-
         try {
-            Thread.sleep(15_000);
+            thread1.join();
+            thread2.join();
+            thread3.join();
+            thread4.join();
 
         } catch (InterruptedException e) {
             e.printStackTrace();
